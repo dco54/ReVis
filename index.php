@@ -58,6 +58,7 @@
           
             <?php
                 include 'config/class.conexion.php';
+                //require_once 'config/class.conexion.php';
                 $db = new Conexion();
     
                 /*if (isset($_POST['insertar'])){
