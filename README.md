@@ -1,5 +1,5 @@
 # ReVis
-repositorio visual
+# repositorio visual
 
 El repositorio visual (REVIS) es una aplicación web para almacenar diferentes tipos de aplicaciones y archivos creados por un desarrollador. 
 El sistema almacena diferentes proyectos y los asocia a un desarrollador previamente registrado, los proyectos se clasifican principalmente en aplicaciones de software, trabajos de diseño gráfico, soundtracks y otros. 
