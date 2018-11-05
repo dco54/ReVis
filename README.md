@@ -25,3 +25,7 @@ Nuestro objetivo es brindar un espacio para que desarrolladores y creadores inde
 5. Propiedades del projecto->testing->phpunit->addfolder->tests
 
 6. Crear test.
+
+Video:
+
+[![Video Referencial](https://img.youtube.com/vi/aIxXd0s7ARA/0.jpg)](https://www.youtube.com/watch?v=aIxXd0s7ARA)
