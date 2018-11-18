@@ -12,15 +12,16 @@
   <div class="form">
       
       <ul class="tab-group">
-        <li class="tab active"><a href="#signup">Registrarse</a></li>
+        
         <li class="tab"><a href="#login">Iniciar Sesion</a></li>
+        <li class="tab active"><a href="#signup">Registrarse</a></li>
       </ul>
       
       <div class="tab-content">
         <div id="signup">   
           <!-- <h1>Registrate Gratis </h1> -->
           
-          <form action="index.php" method="post">
+          <form action="http://localhost:8080/revis/controller/registro.php" method="post">
           
           <div class="top-row">
             <div class="field-wrap">
@@ -34,7 +35,7 @@
               <label>
                 Apellidos<span class="req">*</span>
               </label>
-              <input name="apellidos" type="text"required autocomplete="off"/>
+              <input name="apellidos" type="text"required autocomplete="off" />
             </div>
           </div>
 
@@ -42,44 +43,18 @@
             <label>
               Correo Electronico<span class="req">*</span>
             </label>
-            <input name="correoElectronico" type="email"required autocomplete="off"/>
+            <input name="correoElectronico" type="email"required autocomplete="off" />
           </div>
           
           <div class="field-wrap">
             <label>
               Contrase�a<span class="req">*</span>
             </label>
-            <input name="clave" type="password"required autocomplete="off"/>
-          </div>
-          
-          <button name="registrar" type="submit" class="button button-block"/>Registrar</button>
-          
-          </form>
-          
-            <?php
-                include 'config/class.conexion.php';
-                //require_once 'config/class.conexion.php';
-                $db = new Conexion();
-    
-                /*if (isset($_POST['insertar'])){
-                    $nombres = $_POST['nombres'];
-                    $apellidos = $_POST['apellidos'];
-                    $correoElectronico = $_POST['correoElectronico'];
-                    $clave = $_POST['clave'];
-
-                    $insertar = "INSERT INTO desarrollador (nombres, apellidos, correoElectronico, clave) VALUES ('$nombres', '$apellidos', '$correoElectronico', '$clave')";
-
-                    $ejecutar = mysqli_query($db, $ejecutar);
-                    
-                    if ($ejecutar){
-                        echo "<label> Insertado Correctamente </label>";
-                    }else{
-                        echo "<label> No registrado </label>";
-                    }
-
-                }*/
-
-            ?>
+            <input name="clave" type="password"required autocomplete="off" />
+          </div>          
+          <button name="registrar" type="submit" class="button button-block"/>Registrar</button>          
+          </form>   
+            
 
         </div>
         

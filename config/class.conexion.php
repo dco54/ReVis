@@ -1,22 +1,34 @@
 <?php
-class Conexion extends mysqli{
-    private $DB_HOST = 'localhost';
-    private $DB_USER = 'root';
-    private $DB_PASS = '';
-    private $DB_NAME = 'revis';
+//class Conexion extends mysqli{
+define('HOST','localhost'); //AQUI VA TU HOST
+define('USER','root');
+define('PASS','');
+define('DBNAME','revistest');
+//define('DBNAME2','BDinexistente');
+
+class Conexion{
+    protected $conexion;
     
-    public function __construct(){
-        parent:: __construct($this->DB_HOST, $this-> DB_USER, $this->DB_PASS, $this->DB_NAME);
-        $this->set_charset('utf-8');
+    public function conectar()
+    {        
+        $this->conexion = new mysqli(HOST, USER, PASS, DBNAME);
+        if ($this->conexion->connect_errno) {
+            die('Error en la Conexion'. mysqli_connect_errno());
+            return false;
+        }        
+        return true;
+    }    
+    public function registrar($nombres, $apellidos, $correoElectronico, $clave)
+    {
+        $this->conexion = new mysqli(HOST, USER, PASS, DBNAME);
+        $sql = "INSERT INTO desarrollador (nombres, apellidos, correoElectronico, clave) VALUES ('$nombres', '$apellidos', '$correoElectronico', '$clave')";
+        if(strlen($nombres)==0 || strlen($apellidos)==0 || strlen($correoElectronico)==0 || strlen($clave)==0  ){
+            return false;
+        }
+        if ($this->conexion->query($sql)){
+            return true;
+        }
         
-        $this->connect_errno ? die('Error en la Conexion'. mysqli_connect_errno()):
-            $m = 'Conectado';
-        return $m;
-        
-        return 'No Conectado';
-    } 
-    
-    
-    
+    }
 }
 ?>

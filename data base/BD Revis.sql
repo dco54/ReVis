@@ -1,10 +1,10 @@
-create database revis;
-use revis;
+create database revistest;
+use revistest;
 create table desarrollador(
 	idDesarrollador int not null auto_increment,
-    nombres varchar(40) not null,
-    apellidos varchar(40) not null,
-    correoElectronico varchar(50) not null,
+    nombres varchar(30) not null,
+    apellidos varchar(30) not null,
+    correoElectronico varchar(30) not null,
     clave varchar(20) not null,
     primary key (idDesarrollador)
 )	engine=InnoDB;

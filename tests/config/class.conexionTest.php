@@ -12,14 +12,49 @@ class ConexionTest extends PHPUnit_Framework_TestCase {
         $this->object = new Conexion();
     }
            
-    public function test__construct(){
-        $actual=$this->object->__construct();
-        $result='Conectado';
+    public function testConectar(){
+        $actual=$this->object->conectar();
+        $result=true;
         $this->assertEquals($actual, $result);
     }
     
-    public function tearDown() {
-        $this->object->close();
-    } 
+    public function testRegistrar(){
+        $actual=$this->object->registrar('elefante','mani','efeman@gmail.com','efelante');
+        $result=true;
+        $this->assertEquals($actual, $result);
+    }
+    public function testRegistrar1(){
+        $actual=$this->object->registrar('franklin','canaza ccori','frankling.cn@yahoo.com','ccc');
+        $result=true;
+        $this->assertEquals($actual, $result);
+    }
+    public function testRegistrar2(){
+        $actual=$this->object->registrar('juandlsldlkfslgdlgls','perez','mili@hotmail.com','');
+        $result=false;
+        $this->assertEquals($result,$actual);
+    }
+    public function testRegistrar4(){
+        $actual=$this->object->registrar('','perez','pers@gmail.com','contrasena');
+        $result=false;
+        $this->assertEquals($result,$actual);
+    }
+    public function testRegistrar5(){
+        $actual=$this->object->registrar('juan0','','juan@gmail.com','contrasena');
+        $result=false;
+        $this->assertEquals($result,$actual);
+    }
+    public function testRegistrar6(){
+        $actual=$this->object->registrar('juan1','perez2','','contrasena');
+        $result=false;
+        $this->assertEquals($result,$actual);
+    }
+    
+    public function testRegistrar7(){
+        $actual=$this-> object->registrar(' ','mamani','juanito@gmail.com','comtrasena');
+        $r=true;
+        $this-> assertEquals($actual,$r);
+    }
+    
+    
 
 }
