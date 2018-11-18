@@ -11,14 +11,39 @@
 <body>
   <div class="form">
       
-      <ul class="tab-group">
-        
-        <li class="tab"><a href="#login">Iniciar Sesion</a></li>
-        <li class="tab active"><a href="#signup">Registrarse</a></li>
+      <ul class="tab-group">        
+        <li class="tab active"><a href="#login">Iniciar Sesion</a></li>
+        <li class="tab"><a href="#signup">Registrarse</a></li>
       </ul>
       
       <div class="tab-content">
-        <div id="signup">   
+               
+        <div id="login">   
+          <h1>Bienvenido!</h1>
+          
+          <form action="/" method="post">
+          
+           <div class="field-wrap">
+            <label>
+              Correo Electronico<span class="req">*</span>
+            </label>
+            <input type="email"required autocomplete="off"/>
+           </div>
+          
+          <div class="field-wrap">
+            <label>
+              Contrase�a<span class="req">*</span>
+            </label>
+            <input type="password"required autocomplete="off"/>
+          </div>
+          
+          <p class="forgot"><a href="#">Olvid� su contrase�a?</a></p>
+          
+          <button class="button button-block"/>Iniciar</button>
+          
+          </form>
+        </div>
+          <div id="signup">   
           <!-- <h1>Registrate Gratis </h1> -->
           
           <form action="http://localhost:8080/revis/controller/registro.php" method="post">
@@ -55,33 +80,6 @@
           <button name="registrar" type="submit" class="button button-block"/>Registrar</button>          
           </form>   
             
-
-        </div>
-        
-        <div id="login">   
-          <h1>Bienvenido!</h1>
-          
-          <form action="/" method="post">
-          
-           <div class="field-wrap">
-            <label>
-              Correo Electronico<span class="req">*</span>
-            </label>
-            <input type="email"required autocomplete="off"/>
-           </div>
-          
-          <div class="field-wrap">
-            <label>
-              Contrase�a<span class="req">*</span>
-            </label>
-            <input type="password"required autocomplete="off"/>
-          </div>
-          
-          <p class="forgot"><a href="#">Olvid� su contrase�a?</a></p>
-          
-          <button class="button button-block"/>Iniciar</button>
-          
-          </form>
 
         </div>
         
